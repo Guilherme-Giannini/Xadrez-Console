@@ -18,6 +18,12 @@ class Program
                 Console.WriteLine();
                 Console.WriteLine("Origem: ");
                 Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+
+                bool[,] posicoesPossiveis = partida.tab.peca(origem).MovimentosPossiveis();
+
+                Console.Clear(); 
+                Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
+
                 Console.WriteLine("Destino: ");
                 Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 
